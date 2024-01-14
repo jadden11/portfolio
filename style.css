@@ -1,0 +1,256 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* background-color: rgb(179, 158, 158); */
+  background: radial-gradient(circle, #bdbaba, #705d5d5d);
+}
+
+/* NAVBAR */
+
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: white;
+}
+
+.nav-logo {
+  max-width: 60px;
+  height: auto;
+  width: 50%;
+}
+
+@media (max-width: 600px) {
+  .nav-logo {
+      width: 80%;  
+  }
+}
+
+
+nav h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Gaya untuk ikon */
+.fa-brands {
+  font-size: 1.2em;
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+
+  nav h1 {
+    margin-bottom: 0.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+}
+
+/* IDENTITAS */
+
+.identitas {
+  padding-top: 8rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+.identitas .data {
+  padding-top: 2em;
+}
+
+.identitas .data h2 {
+  font-family: roboto;
+  font-weight: 900;
+  font-size: 30px;
+  color: rgb(33, 10, 70);
+}
+
+.identitas .data p {
+  font-family: roboto;
+  font-size: 14px;
+}
+
+.identitas img {
+  width: 203px;
+  /* height: 200px; */
+}
+
+@media screen and (max-width: 768px) {
+  .identitas {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .identitas .data,
+  .identitas img {
+    padding-top: 2rem;
+  }
+}
+
+/* SKILL */
+
+.skill {
+  padding-top: 9rem;
+}
+
+.skill h1 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-family: 'kanit';
+}
+
+.card {
+  position: relative;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 5px;
+  flex: 1 1 200px;
+  color: white;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-bottom: 5rem;
+  padding-top: 2rem;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5);
+  /* Overlay hitam semitransparan */
+  z-index: 1;
+}
+
+.card h3,
+.card ul {
+  position: relative;
+  z-index: 2;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* Efek blur pada gambar latar */
+.card>div {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: blur(8px);
+  z-index: 0;
+}
+
+
+/* FOOTER */
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-around;
+  align-items: top;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #444;
+}
+
+.footer-section {
+  flex: 1;
+  padding: 10px;
+  min-width: 200px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li a {
+  color: white;
+  text-decoration: none;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.social-links a {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-links a i {
+  color: white;
+  font-size: 20px;
+}
+
+.footer-bottom {
+  padding-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-section {
+    margin-bottom: 20px;
+  }
+}
